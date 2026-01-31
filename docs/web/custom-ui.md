@@ -79,3 +79,45 @@ capability to a Gateway surface so it can run consistently across channels:
 
 Document the mapping for each feature before implementation so the OpenClaw UI,
 CLI, and Gateway remain consistent.
+
+## Example capability inventory
+
+If you are planning a custom UI, capture the intended scope up front and map
+each item to the closest OpenClaw surface. Here is a sample inventory based on
+common requests:
+
+### Channels
+
+- WhatsApp: [WhatsApp](/channels/whatsapp)
+- Telegram: [Telegram](/channels/telegram)
+- Microsoft Teams (plugin): [Microsoft Teams](/channels/msteams)
+
+### Models
+
+Model providers and credentials live in Gateway configuration; verify the
+providers you plan to use are supported in your deployment. Start in
+[Gateway configuration](/gateway/configuration).
+
+### Productivity integrations
+
+Plan an ingestion and authorization flow first (for example, Notion, GitHub,
+Obsidian). Each integration should map to a tool call or webhook, not direct UI
+logic. See [Webhooks](/automation/webhook).
+
+### Tools and automation
+
+- Browser tooling: [Browser tool](/tools/browser)
+- Canvas and screen automation: [Canvas](/platforms/mac/canvas)
+- Voice wake and talk mode: [Voice wake](/nodes/voicewake)
+- Cron scheduling: [Cron jobs](/automation/cron-jobs)
+- Webhooks: [Webhooks](/automation/webhook)
+
+### Media and creative
+
+- Camera capture: [Camera node](/nodes/camera)
+- Image understanding and attachments: [Images](/nodes/images)
+
+### Platform targets
+
+Confirm your UI runs on the intended platforms (for example, Windows) and uses
+the Gateway WebSocket as the shared control plane.
